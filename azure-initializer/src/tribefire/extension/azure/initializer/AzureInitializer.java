@@ -58,13 +58,13 @@ public class AzureInitializer extends AbstractInitializer<AzureInitializerMainCo
 
 	private void addMetaDataToModelsCommon(PersistenceInitializationContext context, AzureInitializerMainContract initializerMainContract) {
 		ModelMetaDataEditor modelEditor = BasicModelMetaDataEditor.create(initializerMainContract.models().configuredDataModel())
-				.withEtityFactory(context.getSession()::create).done();
+				.withEntityFactory(context.getSession()::create).done();
 		modelEditor.onEntityType(ResourceSource.T).addMetaData(initializerMainContract.initializer().binaryProcessWith());
 		modelEditor.onEntityType(AzureBlobSource.T).addMetaData(initializerMainContract.initializer().binaryProcessWith());
 	}
 	private void addMetaDataToModelsProcess(PersistenceInitializationContext context, AzureInitializerMainContract initializerMainContract) {
 		ModelMetaDataEditor modelEditor = BasicModelMetaDataEditor.create(initializerMainContract.models().configuredServiceModel())
-				.withEtityFactory(context.getSession()::create).done();
+				.withEntityFactory(context.getSession()::create).done();
 		modelEditor.onEntityType(AzureRequest.T).addMetaData(initializerMainContract.initializer().serviceProcessWith());
 	}
 

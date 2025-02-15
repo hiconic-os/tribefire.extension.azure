@@ -15,7 +15,7 @@
 // ============================================================================
 package tribefire.extension.azure.initializer.wire.space;
 
-import com.braintribe.model.accessdeployment.smood.SmoodAccess;
+import com.braintribe.model.accessdeployment.smood.CollaborativeSmoodAccess;
 import com.braintribe.model.extensiondeployment.check.CheckBundle;
 import com.braintribe.model.extensiondeployment.meta.BinaryProcessWith;
 import com.braintribe.model.extensiondeployment.meta.ProcessWith;
@@ -79,8 +79,8 @@ public class AzureInitializerSpace extends AbstractInitializerSpace implements A
 
 	@Override
 	@Managed
-	public SmoodAccess defaultAccess() {
-		SmoodAccess bean = create(SmoodAccess.T);
+	public CollaborativeSmoodAccess defaultAccess() {
+		CollaborativeSmoodAccess bean = create(CollaborativeSmoodAccess.T);
 		bean.setExternalId("azure.test.access");
 		bean.setName("Azure Test Access");
 		bean.setMetaModel(models.configuredDataModel());

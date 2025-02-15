@@ -15,7 +15,7 @@
 // ============================================================================
 package tribefire.extension.azure.initializer.wire.contract;
 
-import com.braintribe.model.accessdeployment.smood.SmoodAccess;
+import com.braintribe.model.accessdeployment.smood.CollaborativeSmoodAccess;
 import com.braintribe.model.extensiondeployment.check.CheckBundle;
 import com.braintribe.model.extensiondeployment.meta.BinaryProcessWith;
 import com.braintribe.model.extensiondeployment.meta.ProcessWith;
@@ -26,7 +26,7 @@ import tribefire.extension.azure.model.deployment.AzureServiceProcessor;
 
 public interface AzureInitializerContract extends WireSpace {
 
-	SmoodAccess defaultAccess();
+	CollaborativeSmoodAccess defaultAccess();
 
 	AzureBlobBinaryProcessor blobProcessor();
 

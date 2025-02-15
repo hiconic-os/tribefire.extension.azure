@@ -41,9 +41,9 @@ limitations under the License.
 			<?tag asset?>
 		</dependency>
 		<dependency>
-			<groupId>com.braintribe.gm</groupId>
+			<groupId>tribefire.cortex</groupId>
 			<artifactId>extension-deployment-model</artifactId>
-			<version>${V.com.braintribe.gm}</version>
+			<version>${V.tribefire.cortex}</version>
 			<?tag asset?>
 		</dependency>
 		<dependency>
